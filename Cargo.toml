@@ -4,10 +4,9 @@ description = "Parse Excel files in Rust"
 authors = ["NEXORA Studios", "MoYuan-CN"]
 readme = "README.md"
 repository = "https://github.com/NEXORA-Studios/Lib.Rust.Rlsx"
-license = "MIT"
 license-file = "LICENSE"
 keywords = ["excel", "xlsx", "parser", "rust"]
-categories = ["data-format", "parsing"]
+categories = ["parsing"]
 version = "0.1.0"
 edition = "2024"
 
