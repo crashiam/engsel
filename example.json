@@ -1,0 +1,842 @@
+{
+    "sheets": [
+        {
+            "name": "Number",
+            "cells": [
+                {
+                    "address": "A1",
+                    "value": { "String": "approximation" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "B1",
+                    "value": { "String": "近似值" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A2",
+                    "value": { "String": "Associative property（law）" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "B2",
+                    "value": { "String": "结合律" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A3",
+                    "value": { "String": "base" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B3",
+                    "value": { "String": "底数" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "A4",
+                    "value": { "String": "bracket" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B4",
+                    "value": { "String": "括号" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A5",
+                    "value": { "String": "calculate" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B5",
+                    "value": { "String": "计算" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                }
+            ],
+            "rows": [
+                [
+                    {
+                        "address": "A1",
+                        "value": { "String": "approximation" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    },
+                    {
+                        "address": "B1",
+                        "value": { "String": "近似值" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A2",
+                        "value": { "String": "Associative property（law）" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    },
+                    {
+                        "address": "B2",
+                        "value": { "String": "结合律" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A3",
+                        "value": { "String": "base" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B3",
+                        "value": { "String": "底数" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A4",
+                        "value": { "String": "bracket" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B4",
+                        "value": { "String": "括号" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A5",
+                        "value": { "String": "calculate" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B5",
+                        "value": { "String": "计算" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ]
+            ]
+        },
+        {
+            "name": "Algebra",
+            "cells": [
+                {
+                    "address": "A1",
+                    "value": { "String": "algebra" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B1",
+                    "value": { "String": "代数" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A2",
+                    "value": { "String": "algebraic" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B2",
+                    "value": { "String": "代数的" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                }
+            ],
+            "rows": [
+                [
+                    {
+                        "address": "A1",
+                        "value": { "String": "algebra" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B1",
+                        "value": { "String": "代数" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A2",
+                        "value": { "String": "algebraic" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B2",
+                        "value": { "String": "代数的" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ]
+            ]
+        },
+        {
+            "name": "Geometry",
+            "cells": [
+                {
+                    "address": "A1",
+                    "value": { "String": "A is perpendicular to B" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B1",
+                    "value": { "String": "A垂直于B" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A2",
+                    "value": { "String": "acute angle" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B2",
+                    "value": { "String": "锐角" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A3",
+                    "value": { "String": "adjacent" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B3",
+                    "value": { "String": "邻近的，相邻的" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A4",
+                    "value": { "String": "alternate angle" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B4",
+                    "value": { "String": "内错角" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A5",
+                    "value": { "String": "angle" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B5",
+                    "value": { "String": "角度" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                }
+            ],
+            "rows": [
+                [
+                    {
+                        "address": "A1",
+                        "value": { "String": "A is perpendicular to B" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B1",
+                        "value": { "String": "A垂直于B" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A2",
+                        "value": { "String": "acute angle" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B2",
+                        "value": { "String": "锐角" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A3",
+                        "value": { "String": "adjacent" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B3",
+                        "value": { "String": "邻近的，相邻的" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A4",
+                        "value": { "String": "alternate angle" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B4",
+                        "value": { "String": "内错角" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A5",
+                        "value": { "String": "angle" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B5",
+                        "value": { "String": "角度" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ]
+            ]
+        },
+        {
+            "name": "Statistics &amp; Probability",
+            "cells": [
+                {
+                    "address": "A1",
+                    "value": { "String": "analyse" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B1",
+                    "value": { "String": "分析" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A2",
+                    "value": { "String": "average" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B2",
+                    "value": { "String": "平均数  (均值)" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                },
+                {
+                    "address": "A3",
+                    "value": { "String": "bar chart" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 11.0
+                    }
+                },
+                {
+                    "address": "B3",
+                    "value": { "String": "柱状图" },
+                    "style": {
+                        "bg_color": null,
+                        "fg_color": null,
+                        "font_family": null,
+                        "bold": false,
+                        "italic": false,
+                        "underline": false,
+                        "font_size": 12.0
+                    }
+                }
+            ],
+            "rows": [
+                [
+                    {
+                        "address": "A1",
+                        "value": { "String": "analyse" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B1",
+                        "value": { "String": "分析" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A2",
+                        "value": { "String": "average" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B2",
+                        "value": { "String": "平均数  (均值)" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ],
+                [
+                    {
+                        "address": "A3",
+                        "value": { "String": "bar chart" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 11.0
+                        }
+                    },
+                    {
+                        "address": "B3",
+                        "value": { "String": "柱状图" },
+                        "style": {
+                            "bg_color": null,
+                            "fg_color": null,
+                            "font_family": null,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "font_size": 12.0
+                        }
+                    }
+                ]
+            ]
+        }
+    ]
+}

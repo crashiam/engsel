@@ -28,9 +28,10 @@ impl SharedStrings {
         loop {
             match reader.read_event_into(&mut buffer) {
                 Ok(Event::Start(e)) => {
-                    if e.local_name().as_ref() == b"t" {
-                        in_t = true;
+                    if e.local_name().as_ref() == b"si" {
                         current_string.clear();
+                    } else if e.local_name().as_ref() == b"t" {
+                        in_t = true;
                     }
                 }
                 Ok(Event::Text(e)) => {
