@@ -229,8 +229,7 @@ impl Styles {
                                             } else if attr_name == b"theme" {
                                                 // For theme colors, we'll map them to standard colors
                                                 // Theme 7 with tint is yellow in Excel's default theme
-                                                color_value = Some(String::from("#FFFF00"));
-                                                break;
+                                                print!("Todo: Handle theme colors");
                                             } else if attr_name == b"auto"
                                                 || attr_name == b"indexed"
                                             {
