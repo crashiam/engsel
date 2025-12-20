@@ -125,7 +125,7 @@ impl Styles {
         let mut italic = false;
         let mut underline = false;
         let mut font_size = None;
-        let font_family = None;
+        let mut font_family = None;
         let mut color = None;
 
         loop {
@@ -156,7 +156,7 @@ impl Styles {
                         for attr in e.attributes() {
                             let attr = attr?;
                             if attr.key.local_name().as_ref() == b"val" {
-                                let _font_family =
+                                font_family =
                                     Some(String::from_utf8_lossy(attr.value.as_ref()).to_string());
                                 break;
                             }
@@ -213,28 +213,37 @@ impl Styles {
                                 Event::Start(inner_e) => {
                                     // Create a longer-lived sub_name
                                     let sub_name = inner_e.local_name().as_ref().to_owned();
-                                    if sub_name == b"fgColor" {
-                                        // Get rgb attribute
+                                    if sub_name == b"fgColor" || sub_name == b"bgColor" {
+                                        // Get color attributes
+                                        let mut color_value = None;
                                         for attr in inner_e.attributes() {
                                             let attr = attr?;
-                                            if attr.key.local_name().as_ref() == b"rgb" {
+                                            let attr_name =
+                                                attr.key.local_name().as_ref().to_owned();
+                                            if attr_name == b"rgb" {
                                                 let rgb =
                                                     String::from_utf8_lossy(attr.value.as_ref())
                                                         .to_string();
-                                                fg_color = Some(format!("#{}", rgb));
+                                                color_value = Some(format!("#{}", rgb));
+                                                break;
+                                            } else if attr_name == b"theme" {
+                                                // For theme colors, we'll map them to standard colors
+                                                // Theme 7 with tint is yellow in Excel's default theme
+                                                color_value = Some(String::from("#FFFF00"));
+                                                break;
+                                            } else if attr_name == b"auto"
+                                                || attr_name == b"indexed"
+                                            {
+                                                // Auto and indexed colors are handled separately
                                                 break;
                                             }
                                         }
-                                    } else if sub_name == b"bgColor" {
-                                        // Get rgb attribute
-                                        for attr in inner_e.attributes() {
-                                            let attr = attr?;
-                                            if attr.key.local_name().as_ref() == b"rgb" {
-                                                let rgb =
-                                                    String::from_utf8_lossy(attr.value.as_ref())
-                                                        .to_string();
-                                                bg_color = Some(format!("#{}", rgb));
-                                                break;
+
+                                        if let Some(color) = color_value {
+                                            if sub_name == b"fgColor" {
+                                                fg_color = Some(color);
+                                            } else {
+                                                bg_color = Some(color);
                                             }
                                         }
                                     }
@@ -303,8 +312,16 @@ impl Styles {
                 fg_color: None,
             });
 
+            // For solid fill patterns, Excel uses fgColor for background color
+            // So we need to check both and prioritize fgColor if it's set
+            let background_color = if fill.fg_color.is_some() {
+                fill.fg_color.clone()
+            } else {
+                fill.bg_color.clone()
+            };
+
             let cell_style = CellStyle {
-                bg_color: fill.bg_color.clone(),
+                bg_color: background_color,
                 fg_color: font.color.clone(),
                 font_family: font.font_family.clone(),
                 bold: font.bold,
