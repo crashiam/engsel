@@ -1,11 +1,11 @@
-# rlsx - Excel File Parser for Rust
+# engsel - xlsx parser for Rust
 
-A fast and lightweight Rust library for parsing Excel (.xlsx) files.
+A library for parsing `xlsx` files.
 
 ## Features
 
-- Parse Excel (.xlsx) files into structured data models
-- Export Excel files to JSON format
+- Parse `xlsx` files into structured data models
+- Export `xlsx` files to JSON format
 - Support for multiple sheets in a single workbook
 - Cell value types: String, Number, Boolean, Date, and Empty
 - Basic cell styling support
@@ -14,41 +14,20 @@ A fast and lightweight Rust library for parsing Excel (.xlsx) files.
 
 ## Installation
 
-Add this to your Cargo.toml file:
+Add this to Cargo.toml
 
 ```toml
 [dependencies]
-rlsx = "0.1.0"
+engsel = { git = "https://github.com/crashiam/engsel.git", branch = "main" } 
 ```
 
 ## Usage
-
-### Basic Usage
-
-```rust
-use std::path::Path;
-use rlsx::parse_xlsx_to_json;
-
-fn main() {
-    let path = Path::new("example.xlsx");
-    
-    match parse_xlsx_to_json(path) {
-        Ok(json) => {
-            println!("Successfully parsed XLSX file to JSON");
-            println!("JSON: {}", json);
-        }
-        Err(e) => {
-            println!("Error parsing XLSX file: {}", e);
-        }
-    }
-}
-```
 
 ### Parsing to Structured Workbook
 
 ```rust
 use std::path::Path;
-use rlsx::{parse_xlsx_to_workbook, Workbook};
+use engsel::{parse_xlsx_to_workbook, Workbook};
 
 fn main() {
     let path = Path::new("example.xlsx");
@@ -77,15 +56,15 @@ fn main() {
 ### Core Functions
 
 #### `parse_xlsx_to_json<P: AsRef<Path>>(path: P) -> Result<String, XlsxError>`
-Parses an Excel file and returns its contents as a JSON string.
+Parses an `xlsx` file and returns its contents as a JSON string.
 
 #### `parse_xlsx_to_workbook<P: AsRef<Path>>(path: P) -> Result<Workbook, XlsxError>`
-Parses an Excel file and returns a structured `Workbook` object.
+Parses an `xlsx` file and returns a structured `Workbook` object.
 
 ### Data Structures
 
 #### `Workbook`
-Represents an entire Excel workbook containing multiple sheets.
+Represents an entire `xlsx` workbook containing multiple sheets.
 
 ```rust
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -150,7 +129,7 @@ pub struct CellStyle {
 
 ## Architecture
 
-The rlsx library is structured as follows:
+The engsel library is structured as follows:
 
 - **lib.rs**: Main library entry point exposing public API
 - **model.rs**: Core data structures (Workbook, Sheet, Cell, etc.)
@@ -180,7 +159,7 @@ The rlsx library is structured as follows:
 
 ```rust
 use std::path::Path;
-use rlsx::parse_xlsx_to_workbook;
+use engsel::parse_xlsx_to_workbook;
 
 fn main() {
     let path = Path::new("example.xlsx");
@@ -191,11 +170,11 @@ fn main() {
             // Access a specific cell (e.g., A1)
             if let Some(cell) = sheet.cells.iter().find(|c| c.address == "A1") {
                 match &cell.value {
-                    rlsx::CellValue::String(s) => println!("A1: {}", s),
-                    rlsx::CellValue::Number(n) => println!("A1: {}", n),
-                    rlsx::CellValue::Bool(b) => println!("A1: {}", b),
-                    rlsx::CellValue::Date(d) => println!("A1: {}", d),
-                    rlsx::CellValue::Empty => println!("A1: Empty"),
+                    engsel::CellValue::String(s) => println!("A1: {}", s),
+                    engsel::CellValue::Number(n) => println!("A1: {}", n),
+                    engsel::CellValue::Bool(b) => println!("A1: {}", b),
+                    engsel::CellValue::Date(d) => println!("A1: {}", d),
+                    engsel::CellValue::Empty => println!("A1: Empty"),
                 }
             }
         }
@@ -207,7 +186,7 @@ fn main() {
 
 ```rust
 use std::path::Path;
-use rlsx::parse_xlsx_to_workbook;
+use engsel::parse_xlsx_to_workbook;
 
 fn main() {
     let path = Path::new("example.xlsx");
@@ -226,11 +205,11 @@ fn main() {
                     }
                     
                     match &cell.value {
-                        rlsx::CellValue::String(s) => print!("{}", s),
-                        rlsx::CellValue::Number(n) => print!("{}", n),
-                        rlsx::CellValue::Bool(b) => print!("{}", b),
-                        rlsx::CellValue::Date(d) => print!("{}", d.format("%Y-%m-%d")),
-                        rlsx::CellValue::Empty => print!("(empty)"),
+                        engsel::CellValue::String(s) => print!("{}", s),
+                        engsel::CellValue::Number(n) => print!("{}", n),
+                        engsel::CellValue::Bool(b) => print!("{}", b),
+                        engsel::CellValue::Date(d) => print!("{}", d.format("%Y-%m-%d")),
+                        engsel::CellValue::Empty => print!("(empty)"),
                     }
                 }
                 println!();
@@ -251,64 +230,17 @@ The library returns an `XlsxError` enum with the following variants:
 - `Utf8Error`: UTF-8 encoding error
 - `ParseError`: General parsing error
 
-## Performance Considerations
-
-- The library uses `quick-xml` for fast XML parsing
-- ZIP archive handling is optimized for large files
-- Shared strings are parsed once and reused for better performance
-- Cell values are parsed lazily when needed
-
 ## Limitations
 
-- Currently only supports reading XLSX files (no writing support)
-- Some advanced Excel features may not be supported
+- Currently only supports reading `xlsx` files (no writing support)
+- Some advanced `xlsx` features may not be supported
 - Formula evaluation is not implemented
-- Macro-enabled files (.xlsm) are not supported
+- Macro-enabled files `xlsm` are not supported
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-### Development Setup
-
-1. Clone the repository
-2. Install dependencies with `cargo build`
-3. Run tests with `cargo test`
-4. Format code with `cargo fmt`
-5. Check clippy warnings with `cargo clippy`
+Contributions are welcome!
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Credits
-
-- Built with Rust 🦀
-- Uses `zip` crate for ZIP archive handling
-- Uses `quick-xml` crate for XML parsing
-- Uses `serde` and `serde_json` for JSON serialization
-- Uses `chrono` for date/time handling
-
-## Changelog
-
-### 0.1.0 (Initial Release)
-- Basic XLSX file parsing
-- Support for multiple sheets
-- Cell value parsing (String, Number, Boolean, Date, Empty)
-- Basic styling support
-- JSON export functionality
-- Workbook structured data model
-
-## Roadmap
-
-- [ ] Support for writing XLSX files
-- [ ] Formula evaluation
-- [ ] Enhanced styling support
-- [ ] Chart parsing
-- [ ] Macro support (.xlsm files)
-- [ ] Performance optimizations
-- [ ] Documentation improvements
-
-## Getting Help
-
-If you have any questions, issues, or feature requests, please create an issue on the GitHub repository.
