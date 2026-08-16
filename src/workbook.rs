@@ -1,7 +1,7 @@
-use super::XlsxError;
 use super::model::{Sheet, Workbook};
-use quick_xml::Reader;
+use super::XlsxError;
 use quick_xml::events::Event;
+use quick_xml::Reader;
 use std::collections::HashMap;
 use std::io::Cursor;
 use std::path::Path;

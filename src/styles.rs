@@ -1,7 +1,7 @@
-use super::XlsxError;
 use super::model::CellStyle;
-use quick_xml::Reader;
+use super::XlsxError;
 use quick_xml::events::Event;
+use quick_xml::Reader;
 use std::io::Cursor;
 
 // Helper structs to store parsed style information

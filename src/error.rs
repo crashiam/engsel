@@ -1,5 +1,5 @@
-use quick_xml::Error as XmlError;
 use quick_xml::events::attributes::AttrError;
+use quick_xml::Error as XmlError;
 use thiserror::Error;
 
 #[derive(Error, Debug)]

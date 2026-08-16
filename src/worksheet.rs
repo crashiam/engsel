@@ -1,7 +1,7 @@
-use super::XlsxError;
 use super::model::{Cell, CellValue};
-use quick_xml::Reader;
+use super::XlsxError;
 use quick_xml::events::Event;
+use quick_xml::Reader;
 use std::io::Cursor;
 
 pub struct Worksheet {

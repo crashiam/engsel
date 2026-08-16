@@ -1,5 +1,5 @@
-use std::path::Path;
 use rlsx::parse_xlsx_to_json;
+use std::path::Path;
 
 fn main() {
     // Example usage of the rlsx crate

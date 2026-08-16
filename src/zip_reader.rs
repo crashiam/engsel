@@ -1,8 +1,8 @@
 use std::fs::File;
 use std::io::Read;
 use std::path::Path;
-use zip::ZipArchive;
 use zip::result::ZipError;
+use zip::ZipArchive;
 
 pub struct XlsxArchive {
     archive: ZipArchive<File>,
