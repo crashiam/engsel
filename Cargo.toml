@@ -1,14 +1,18 @@
 [package]
-name = "rlsx"
+name = "engsel"
 description = "Parse Excel files in Rust"
-authors = ["NEXORA Studios", "MoYuan-CN"]
+authors = ["NEXORA Studios", "MoYuan-CN", "A. Christian"]
 readme = "README.md"
-repository = "https://github.com/NEXORA-Studios/Lib.Rust.Rlsx"
+repository = "https://github.com/crashiam/engsel"
 license-file = "LICENSE"
 keywords = ["excel", "xlsx", "parser", "rust"]
 categories = ["parsing"]
 version = "1.0.1"
 edition = "2024"
+
+[lib]
+name = "engsel"
+path = "src/lib.rs"
 
 [dependencies]
 zip = "0.6.6"

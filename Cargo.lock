@@ -190,6 +190,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "engsel"
+version = "1.0.1"
+dependencies = [
+ "chrono",
+ "quick-xml",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "zip",
+]
+
+[[package]]
 name = "find-msvc-tools"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -417,18 +429,6 @@ name = "rand_core"
 version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
-
-[[package]]
-name = "rlsx"
-version = "1.0.1"
-dependencies = [
- "chrono",
- "quick-xml",
- "serde",
- "serde_json",
- "thiserror",
- "zip",
-]
 
 [[package]]
 name = "rustversion"
