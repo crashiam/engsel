@@ -2,7 +2,7 @@ use chrono::DateTime;
 use chrono::Utc;
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub struct CellStyle {
     pub bg_color: Option<String>, // e.g. "#FFEEAA"
     pub fg_color: Option<String>,
@@ -11,20 +11,6 @@ pub struct CellStyle {
     pub italic: bool,
     pub underline: bool,
     pub font_size: Option<f64>,
-}
-
-impl Default for CellStyle {
-    fn default() -> Self {
-        Self {
-            bg_color: None,
-            fg_color: None,
-            font_family: None,
-            bold: false,
-            italic: false,
-            underline: false,
-            font_size: None,
-        }
-    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -43,30 +29,14 @@ pub struct Cell {
     pub style: Option<CellStyle>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub struct Sheet {
     pub name: String,
     pub cells: Vec<Cell>,
     pub rows: Vec<Vec<Cell>>,
 }
 
-impl Default for Sheet {
-    fn default() -> Self {
-        Self {
-            name: String::new(),
-            cells: Vec::new(),
-            rows: Vec::new(),
-        }
-    }
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub struct Workbook {
     pub sheets: Vec<Sheet>,
-}
-
-impl Default for Workbook {
-    fn default() -> Self {
-        Self { sheets: Vec::new() }
-    }
 }

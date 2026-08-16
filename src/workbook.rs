@@ -35,7 +35,7 @@ impl WorkbookParser {
                 Ok(Event::Start(e)) => {
                     if e.local_name().as_ref() == b"sheet" {
                         let mut sheet_name = String::new();
-                        let mut sheet_id = String::new();
+                        let mut _sheet_id = String::new();
 
                         for attr in e.attributes() {
                             let attr = attr?;
@@ -43,7 +43,8 @@ impl WorkbookParser {
                                 sheet_name =
                                     String::from_utf8_lossy(attr.value.as_ref()).to_string();
                             } else if attr.key.local_name().as_ref() == b"r:id" {
-                                sheet_id = String::from_utf8_lossy(attr.value.as_ref()).to_string();
+                                _sheet_id =
+                                    String::from_utf8_lossy(attr.value.as_ref()).to_string();
                             }
                         }
 

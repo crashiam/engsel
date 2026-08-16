@@ -94,10 +94,8 @@ impl Worksheet {
 
                         cells.push(cell.clone());
                         current_row.push(cell);
-                    } else if local_name == b"row" {
-                        if !current_row.is_empty() {
-                            rows.push(current_row.clone());
-                        }
+                    } else if local_name == b"row" && !current_row.is_empty() {
+                        rows.push(current_row.clone());
                     }
                 }
                 Event::Eof => break,
