@@ -239,7 +239,7 @@ The library returns an `XlsxError` enum with the following variants:
 
 ## Contributing
 
-Contributions are welcome!
+Forked from [rlsx](https://crates.io/crates/rlsx) as a learning purpose. Still under a heavy construction. Not ready for external contributions!
 
 ## License
 
